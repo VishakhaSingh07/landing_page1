@@ -9,6 +9,26 @@ body{
     background-color: #ebf2ff;
 }
 
+.container{
+    width: 100%;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+.button_primary{
+    background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #dd2476 52%,
+        #ff512f 100%
+    );
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .navbar{
     display: flex;
     align-items: center;
@@ -24,22 +44,28 @@ body{
     width: 100%;
 }
 
-.nav_items{
-    background-image: linear-gradient(
-        to right,
-        #ff512f 0%,
-        #dd2476 52%,
-        #ff512f 100%
-    );
-    color: #fff;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .nav_items:hover{
     border: 2px solid pink;
+}
+
+.hero_image_container{
+    width: 100%;
+}
+
+.hero_image{
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px;
+    /*position: absolute;*/
+}
+/*
+.hero_image_background{
+    position:absolute;
+}*/
+
+.hero_text{
+    font-size: 30px;
+    margin: 20px 0px;
 }
 
 @media (min-width: 768px) {
@@ -47,14 +73,39 @@ body{
         justify-content: space-between;
         padding: 5px 30px;
     }
+
+    .hero_container{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 }
 
 @media (min-width: 1020px) {
+    .container{
+        max-width: 900px;
+    }
+
     .navbar_brand{
         width: 150px;
     }
-    .nav_items{
+    .button_primary{
         padding: 20px;
         font-size: 20px;
+    }
+
+    .hero_description{
+        width: 100%;
+    }
+
+    .hero_text{
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container{
+        max-width: 1250px;
     }
 }
